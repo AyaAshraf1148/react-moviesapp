@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+.App
+{
+  background-color: #22254b;
+  font-family: "Poppins",sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie
+{
+  width:250px;
+  margin:1rem;
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+ 
+ 
+ }
+.movie img
+{
+  max-width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.movie h3
+{
+  font-size: 18px;
   color: white;
 }
+.movie h3:hover
+{
+  color:rgb(141, 20, 20);
+}
+.movie span
+{
+  color:white;
+}
+.movie-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.navbar
+{
+  background-color: #373b69;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.letter
+{
+  color: #03051d;
+  font-weight:bolder;
+}
+.movie-info
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1rem;
+}
+.movie-info h3
+{
+  margin: 0;
+}
+.namelink
+{
+  text-decoration: none;
+  color: white;
+}
+.search
+{
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  font-family: inherit;
+}
+.tag
+{
+  background-color: #22254b;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: bold;
 
-.App-link {
-  color: #61dafb;
+}
+.tag.green
+{
+  color:rgb(38, 202, 38);
+
+}
+.tag.orange
+{
+  color:orange;
+}
+.tag.red
+{
+  color: red;
+}
+.star
+{
+  position: relative;
+  bottom:446px;
+  left:0px;
+  font-size: 30px;
+  color:white;
+  background-color:transparent;
+}
+.star:hover
+{
+ color: yellow;
+}
+.trash
+{
+  position: relative;
+  bottom:446px;
+  left:0px;
+  font-size: 30px;
+  color:white;
+  background-color:transparent;
+}
+.trash:hover
+{
+ color: red;
+}
+.number
+{
+  margin-left: 5px;
+  background-color: red;
+  padding: 4px;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
