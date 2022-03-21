@@ -1,7 +1,5 @@
 import { useState } from "react";
 import {FaEye} from "react-icons/fa";
-
-
 export default function Logincomponent()
 {
     const [userData,setUserData]=useState({

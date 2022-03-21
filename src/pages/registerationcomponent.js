@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {FaEye} from "react-icons/fa";
 
-
 export default function Registerationcomponent()
 {
     const [userData,setUserData]=useState({
