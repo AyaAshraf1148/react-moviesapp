@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {FaEye} from "react-icons/fa";
+import { ClipLoader } from "react-spinners";
 export default function Logincomponent()
 {
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
+  },[])
     const [userData,setUserData]=useState({
         userEmail:"",
         userPass:""
@@ -36,6 +44,7 @@ export default function Logincomponent()
 
     return(<> 
     <div className="container">
+    {loading ? <div className="loader"><ClipLoader color={'#ffffff'} size={50} /></div>:
       <div className="row">
         <div className="col-md-4 m-auto bg-dark">
     <form onSubmit={(e)=>submitData(e)}>
@@ -61,7 +70,7 @@ export default function Logincomponent()
   </div>
 </form>
 </div>
-</div>
+</div>}
     </div>
     </>)
 }

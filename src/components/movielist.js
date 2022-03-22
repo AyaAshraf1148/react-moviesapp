@@ -13,7 +13,13 @@ import { ClipLoader } from "react-spinners";
 
 export default function MovieList()
 {
-
+    const [loading,setLoading]=useState(false);
+    useEffect(()=>{
+        setLoading(true)
+        setTimeout(() => {
+          setLoading(false)
+        }, 3000);
+      },[])
     // const [style, setStyle] = useState("cont");
 
     const setVoteClass=(vote)=>{
@@ -51,7 +57,8 @@ export default function MovieList()
        if(!movies.length && !isLoading) return 'No movies';
     
         return(
-       isLoading ? <div className="loader"><ClipLoader color={'#ffffff'} size={50} /></div>:(<> 
+    //    isLoading ? <div className="loader"><ClipLoader color={'#ffffff'} size={50} /></div>:
+       (<>   {loading ? <div className="loader"><ClipLoader color={'#ffffff'} size={50} /></div>:
         <div className="movie-container" >
         {movies.map((movie)=>{
             
@@ -70,7 +77,7 @@ export default function MovieList()
         </> );
                 
              })}
-             </div>
+             </div>}
         </>))
         
 
